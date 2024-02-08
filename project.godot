@@ -14,6 +14,7 @@ config/name="Starter Kit 3D Platformer"
 config/tags=PackedStringArray("starterkit")
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+run/max_fps=30
 boot_splash/bg_color=Color(0.92549, 0.92549, 0.960784, 1)
 boot_splash/image="res://splash-screen.png"
 config/icon="res://icon.png"
@@ -21,15 +22,22 @@ config/icon="res://icon.png"
 [autoload]
 
 Audio="*res://scripts/audio.gd"
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor]
 
 movie_writer/movie_file="C:/Users/Kenney/Desktop/video-footage.avi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
 [filesystem]
 
@@ -103,6 +111,10 @@ zoom_out={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
 ]
 }
+
+[physics]
+
+common/physics_ticks_per_second=30
 
 [rendering]
 
