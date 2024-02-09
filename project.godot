@@ -28,8 +28,8 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [editor]
 
@@ -111,10 +111,6 @@ zoom_out={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
 ]
 }
-
-[physics]
-
-common/physics_ticks_per_second=30
 
 [rendering]
 
